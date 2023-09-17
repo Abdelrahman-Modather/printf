@@ -14,7 +14,7 @@ va_list the_list;
 if (!format)
 return (-1);
 va_start(the_list, format);
-while (format && *format)
+while (*format)
 {
 if (*format != '%')
 {
@@ -35,18 +35,14 @@ intia_var++;
 else if (*format == 's')
 {
 char *new_str = va_arg(the_list, char*);
-int strvlen = 0;
-while(new_str[strvlen]){
-strvlen++;
-}
-write(1, new_str, strvlen);
-intia_var += strvlen;
+int str = strlen(new_str);
+write(1, new_str, str);
+intia_var += str;
 }
 else if (*format == '%')
 {
-write(1, "%", 1);
-write(1 format, 1);
-intia_var += 2;
+write(1, format, 1);
+intia_var++;
 }
 }
 format++;
