@@ -11,8 +11,6 @@ int _printf(const char *format, ...)
 {
 int intia_var = 0;
 va_list the_list;
-if (!format)
-return (-1);
 va_start(the_list, format);
 while (*format)
 {
