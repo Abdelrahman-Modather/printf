@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 				return (-1);
 			t_c++;
 		}
-		i++;
+		iden++;
 	}
 	va_end(the_list);
 	return (t_c);
@@ -80,7 +80,7 @@ int prnt_str(va_list the_list)
 		streng = "(null)";
 
 	lngth = strlen(streng);
-	mktob = write(STDOUT_FILENO, streng lngth);
+	mktob = write(STDOUT_FILENO, streng, lngth);
 	if (mktob != lngth)
 		return (-1);
 
