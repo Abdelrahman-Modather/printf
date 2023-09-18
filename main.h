@@ -7,5 +7,6 @@
 #include <string.h>
 
 int _printf(const char *format, ...);
+int fputchar(int c, FILE *file);
 
 #endif
