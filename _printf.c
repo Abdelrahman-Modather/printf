@@ -53,7 +53,7 @@ return (intia_var);
 }
 
 
-int main(void)
+/*int main(void)
 {
 _printf("zeyad\n");
 _printf("%c\n", 'w');
@@ -62,3 +62,4 @@ _printf("%%\n");
 
 return (0);
 }
+*/
