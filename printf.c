@@ -55,10 +55,10 @@ return (intia_var);
 
 int main(void)
 {
-    _printf("zeyad\n");
-    _printf("%c\n",'w');
-    _printf("%s\n","some text");
-    _printf("%%\n");
+_printf("zeyad\n");
+_printf("%c\n", 'w');
+_printf("%s\n", "some text");
+_printf("%%\n");
 
-    return 0;
+return (0);
 }
