@@ -51,15 +51,3 @@ format++;
 va_end(the_list);
 return (intia_var);
 }
-
-
-/*int main(void)
-{
-_printf("zeyad\n");
-_printf("%c\n", 'w');
-_printf("%s\n", "some text");
-_printf("%%\n");
-
-return (0);
-}
-*/
