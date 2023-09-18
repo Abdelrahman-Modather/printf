@@ -14,7 +14,7 @@ va_list the_list;
 if (!format)
 return (-1);
 va_start(the_list, format);
-while (*format)
+while (*format != '\0')
 {
 if (*format != '%')
 {
