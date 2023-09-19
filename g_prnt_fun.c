@@ -22,9 +22,10 @@ int (*g_prnt_fun(const char *i, int ndx))(va_list, char *, unsigned int)
 *{"+x", prnt_hex}, {"+X", prnt_uppx}, {" i", prnt_sint},
 *{" d", prnt_sint}, {" u", prnt_uint}, {" o", prnt_oct},
 *{" x", prnt_hex}, {" X", prnt_uppx}, {"R", prnt_root},
-*{"r", prnt_re},*/ {"%", prnt_prs},{"l", prnt_prs},{" %", prnt_prs},
-*{"h", prnt_prs},/*  {" +i", prnt_pint}, {" +d", prnt_pint},
-*{"+ i", prnt_pint}, {"+ d", prnt_pint}, 
+*{"r", prnt_re},*/ {"%", prnt_prs}, {" %", prnt_prs},
+/*
+*{"h", prnt_prs}, {" +i", prnt_pint},{"l", prnt_prs}, {" +d", prnt_pint},
+*{"+ i", prnt_pint}, {"+ d", prnt_pint},
 *{NULL, NULL},
 */
 	};
