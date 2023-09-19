@@ -47,15 +47,16 @@ void buff_free(buffer_t *oup)
 /**
  * buff_init - initialize var bufft
  * Return: pointer to buuft
+ *_memcpy: th func is imp
 */
 buffer_t *buff_init(void)
 {
 	buffer_t *oup;
-	
+
 	oup = malloc(sizeof(buffer_t));
 	if (oup == NULL)
 		return (NULL);
-	
+
 	oup->buffer = malloc(sizeof(char) * 1024);
 	if (oup->buffer == NULL)
 	{
