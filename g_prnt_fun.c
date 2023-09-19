@@ -27,7 +27,7 @@ int (*g_prnt_fun(const char *i, int ndx))(va_list, char *, unsigned int)
 {NULL, NULL}, {"i", prnt_int}, {"d", prnt_int},
 {"#d", prnt_int}, {"#i", prnt_int},
 /*
-*{"h", prnt_prs},  ,{"l", prnt_prs}, 
+*{"h", prnt_prs},  ,{"l", prnt_prs},
 *, ,
 */
 	};
