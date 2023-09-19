@@ -16,10 +16,10 @@ int prnt_str(va_list the_list, char *buffp, unsigned int buffndx)
     if (string == NULL)
     {
         for (iden = 0; null[iden]; iden++)
-            buffp = buff_hand(buffp, null[iden], buffndx);
+            buffndx = buff_hand(buffp, null[iden], buffndx);
         return (6);
     }
     for (iden = 0; string[iden]; iden++)
-        buffndx = buff_hand(buffp, string[iden], buffp);
+        buffndx = buff_hand(buffp, string[iden], buffndx);
     return (iden);
 }

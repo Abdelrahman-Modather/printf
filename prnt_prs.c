@@ -8,7 +8,7 @@
  * @buffndx: buffer index
  * Return: on success 1
 */
-int prnt_prs(va_list p __attribute__((not_used)), char *buffp, unsigned int buffndx)
+int prnt_prs(va_list a __attribute__((unused)), char *buffp, unsigned int buffndx)
 {
     buff_hand(buffp, '%', buffndx);
 

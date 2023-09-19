@@ -12,7 +12,7 @@ int prnt_shint(va_list the_list, char *buffp, unsigned int buffndx)
     short int inp;
     unsigned int inp_in, inp_tmp, iden, dive, negn;
 
-    inp = va_arg(the_list, short int);
+    inp = va_arg(the_list, int);
     negn = 0;
     if (inp < 0)
     {

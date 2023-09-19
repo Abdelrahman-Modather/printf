@@ -11,7 +11,7 @@ unsigned int buff_hand(char *buffp, char c, unsigned int idenbuffer)
 {
     if (idenbuffer == 1024)
     {
-        buf_prnt(buffp, idenbuffer);
+        prnt_buffer(buffp, idenbuffer);
         idenbuffer = 0;
     }
     buffp[idenbuffer] = c;

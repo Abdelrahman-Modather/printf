@@ -1,8 +1,8 @@
 #include "main.h"
 
-unsigned int memory_copy(buff_t *oup, const char *source, unsigned int var);
-void buff_free(buff_t *oup);
-buff_t *buff_init(void);
+unsigned int _memcpy(buffer_t *oup, const char *source, unsigned int var);
+void free_buffer(buffer_t *oup);
+buffer_t *buff_init(void);
 
 /**
  * memory_copy - copies var fro, memory to source
@@ -11,24 +11,24 @@ buff_t *buff_init(void);
  * @var: num copied
  * Return: num that copied
 */
-unsigned int memory_copy(buff_t *oup, const char *source, unsigned int var)
+unsigned int _memcpy(buffer_t *oup, const char *source, unsigned int var)
 {
     unsigned int ndx;
 
     for (ndx = 0; ndx < var; ndx++)
     {
-        *(oup->buff) = *(source + ndx);
-        (oup->lngth)++;
+        *(oup->buffer) = *(source + ndx);
+        (oup->len)++;
 
-        if (oup->lngth == 1024)
+        if (oup->len == 1024)
         {
-            write(1, oup->strt, oup->lngth);
-            oup->buff = oup->strt;
-            oup->lngth = 0;
+            write(1, oup->start, oup->len);
+            oup->buffer = oup->start;
+            oup->len = 0;
         }
 
         else
-            (oup->buff)++;
+            (oup->buffer)++;
     }
 
     return (var);
@@ -38,9 +38,9 @@ unsigned int memory_copy(buff_t *oup, const char *source, unsigned int var)
  * buff_free - frees bufft
  * @oup: freed bufft
 */
-void buff_free(buff_t *oup)
+void buff_free(buffer_t *oup)
 {
-    free(oup->strt);
+    free(oup->start);
     free(oup);
 }
 
@@ -48,23 +48,23 @@ void buff_free(buff_t *oup)
  * buff_init - initialize var bufft
  * Return: pointer to buuft
 */
-buff_t *buff_init(void)
+buffer_t *buff_init(void)
 {
-    buff_t *oup;
+    buffer_t *oup;
     
-    oup = malloc(sizeof(buff_t));
+    oup = malloc(sizeof(buffer_t));
     if (oup == NULL)
         return (NULL);
     
-    oup->buff = malloc(sizeof(char) * 1024);
-    if (oup->buff == NULL)
+    oup->buffer = malloc(sizeof(char) * 1024);
+    if (oup->buffer == NULL)
     {
         free(oup);
         return (NULL);
     }
 
-    oup->strt = oup->buff;
-    oup->lngth = 0;
+    oup->start = oup->buffer;
+    oup->len = 0;
 
     return (oup);
 }

@@ -23,7 +23,7 @@ int prnt_adderss(va_list the_list, char *buffp, unsigned int buffndx)
             buffndx = buff_hand(buffp, nil[iden], buffndx);
         return (5);
     }
-    inp = (inpp_t)address;
+    inp = (intptr_t)address;
     negn = 0;
     if (inp < 0)
     {
