@@ -10,7 +10,7 @@
 */
 int prnt_prs(va_list a __attribute__((unused)), char *buffp, unsigned int buffndx)
 {
-    buff_hand(buffp, '%%', buffndx);
+    buff_hand(buffp, '%', buffndx);
 
     return (1);
 }
