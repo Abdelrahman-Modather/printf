@@ -46,8 +46,8 @@ void buff_free(buffer_t *oup)
 
 /**
  * buff_init - initialize var bufft
+ *_memcpy - th func is imp
  * Return: pointer to buuft
- *_memcpy: th func is imp
 */
 buffer_t *buff_init(void)
 {
