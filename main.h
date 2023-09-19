@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct prnt
 {
@@ -19,10 +20,10 @@ typedef struct
 } buffer_t;
 
 int _printf(const char *format, ...);
-int prnt_prs(va_list p __attribute__((unused)), char *buffp, unsigned int buffndx);
+int prnt_prs(va_list a __attribute__((unused)), char *buffp, unsigned int buffndx);
 int prnt_char(va_list the_list, char *buffp, unsigned int buffndx);
 int prnt_str(va_list the_list, char *buffp, unsigned int buffndx);
-int prnt_int(va_list the_list, char *buffp, unsigned int buffndx);
+/* int prnt_int(va_list the_list, char *buffp, unsigned int buffndx);
 int prnt_bin(va_list the_list, char *buffp, unsigned int buffndx);
 int prnt_uint(va_list the_list, char *buffp, unsigned int buffndx);
 int prnt_oct(va_list the_list, char *buffp, unsigned int buffndx);
@@ -56,6 +57,6 @@ char *bin_arr(char *bin, long int inp, int negn, int bisize);
 char *hex_arr(char *bny, char *hex, int upp, int hesize);
 char *oct_arr(char *bny, char *oct);
 char *long_oct_arr(char *bny, char *oct);
-char *short_oct_arr(char *bny, char *oct);
+char *short_oct_arr(char *bny, char *oct); */
 
 #endif
