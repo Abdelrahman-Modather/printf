@@ -9,12 +9,12 @@
 */
 unsigned int buff_hand(char *buffp, char c, unsigned int idenbuffer)
 {
-    if (idenbuffer == 1024)
-    {
-        prnt_buffer(buffp, idenbuffer);
-        idenbuffer = 0;
-    }
-    buffp[idenbuffer] = c;
-    idenbuffer++;
-    return (idenbuffer);
+	if (idenbuffer == 1024)
+	{
+		prnt_buffer(buffp, idenbuffer);
+		idenbuffer = 0;
+	}
+	buffp[idenbuffer] = c;
+	idenbuffer++;
+	return (idenbuffer);
 }
