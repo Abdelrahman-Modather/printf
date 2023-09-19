@@ -8,5 +8,5 @@
 */
 int prnt_buffer(char *buffp, unsigned int buffn)
 {
-    return (write(1, buffp, buffn));
+	return (write(1, buffp, buffn));
 }
