@@ -20,7 +20,8 @@ int le_prnt_func(const char *i, int ndx)
 		*{"hx", prnt_shhex}, {"hX", prnt_shuppx}, {"#i", prnt_int},
 		*{"#o", prnt_noct}, {"#x", prnt_nhex}, {"#X", prnt_nuppx},
 		*{"#d", prnt_int}, {"#u", prnt_uint}, {"+i", prnt_pint},
-		*{"+d", prnt_pint}, {"+u", prnt_uint}, {"+o", prnt_oct},{"+x", prnt_hex}, {"+X", prnt_uppx}, {" i", prnt_sint},{" d", prnt_sint}, {" u", prnt_uint}, {" o", prnt_oct},{" x", prnt_hex}, {" X", prnt_uppx}, {"R", prnt_root},{"r", prnt_re},
+		*{"+d", prnt_pint}, {"+u", prnt_uint}, {"+o", prnt_oct},{"+x", prnt_hex}, {"+X", prnt_uppx},
+		*{" i", prnt_sint},{" d", prnt_sint}, {" u", prnt_uint}, {" o", prnt_oct},{" x", prnt_hex}, {" X", prnt_uppx}, {"R", prnt_root},{"r", prnt_re},
 		*/ {"%%", prnt_prs},
 		/**
 		*{"l", prnt_prs},{"h", prnt_prs}, {" +i", prnt_pint},{" +d", prnt_pint},{"+ i", prnt_pint}, {"+ d", prnt_pint}, {" %%", prnt_prs},{NULL, NULL},

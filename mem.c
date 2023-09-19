@@ -5,6 +5,7 @@ void free_buffer(buffer_t *oup);
 buffer_t *buff_init(void);
 
 /**
+ * _memcpy - the func is called _memcpy
  * memory_copy - copies var fro, memory to source
  * @oup: bufft structure
  * @source: pointer to memory
@@ -46,7 +47,6 @@ void buff_free(buffer_t *oup)
 
 /**
  * buff_init - initialize var bufft
- *_memcpy - th func is imp
  * Return: pointer to buuft
 */
 buffer_t *buff_init(void)
