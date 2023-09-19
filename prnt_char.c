@@ -7,7 +7,7 @@
  * @buffp: pointer for buff
  * @buffndx: buffer index
  * Return: on success 1
- * prnt_char: the function prints
+ * prnt_char - the function prints
 */
 int prnt_char(va_list the_list, char *buffp, unsigned int buffndx)
 {
