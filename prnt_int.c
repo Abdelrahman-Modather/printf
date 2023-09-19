@@ -18,7 +18,7 @@ int prnt_int(va_list the_list, char *buffp, unsigned int buffndx)
 	{
 		inp_in = inp * -1;
 		buffndx = buff_hand(buffp, '-', buffndx);
-		negn;
+		negn = 1;
 	}
 	else
 	{
