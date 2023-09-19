@@ -16,19 +16,6 @@ char *type_arg;
 int (*f)(va_list, char *, unsigned int);
 } prnt_tx;
 
-/**
- * struct bfr - struct for buffer
- * @buffer: pointer for buffer
- * @start: pointer for start
- * @len: length
- */
-typedef struct bfr
-{
-char *buffer;
-char *start;
-unsigned int len;
-} buffer_t;
-
 int _printf(const char *format, ...);
 int prnt_prs(va_list a __attribute__((unused)), char *buffp, unsigned int bfi);
 int prnt_char(va_list the_list, char *buffp, unsigned int buffndx);
@@ -68,5 +55,18 @@ char *hex_arr(char *bny, char *hex, int upp, int hesize);
 char *oct_arr(char *bny, char *oct);
 char *long_oct_arr(char *bny, char *oct);
 char *short_oct_arr(char *bny, char *oct);
+
+/**
+ * struct bfr - struct for buffer
+ * @buffer: pointer for buffer
+ * @start: pointer for start
+ * @len: length
+ */
+typedef struct bfr
+{
+char *buffer;
+char *start;
+unsigned int len;
+} buffer_t;
 
 #endif
