@@ -17,7 +17,7 @@ int (*g_prnt_fun(const char *i, int ndx))(va_list, char *, unsigned int)
 *{"hd", prnt_shint}, {"hu", prnt_shuint}, {"ho", prnt_shoct},
 *{"hx", prnt_shhex}, {"hX", prnt_shuppx}, ,
 *{"#o", prnt_noct}, {"#x", prnt_nhex}, {"#X", prnt_nuppx},
-*, {"#u", prnt_uint}, 
+*,{"#u", prnt_uint},
 *{"+d", prnt_pint}, {"+u", prnt_uint}, {"+o", prnt_oct},
 *{"+x", prnt_hex}, {"+X", prnt_uppx}, {" i", prnt_sint},
 *{" d", prnt_sint}, {" u", prnt_uint}, {" o", prnt_oct},
