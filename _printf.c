@@ -26,8 +26,7 @@ int _printf(const char *format, ...)
 				return (-1);
 			}
 			else
-			{
-				fun = g_prnt_fun(format, iden + 1);
+			{fun = g_prnt_fun(format, iden + 1);
 				if (fun == NULL)
 				{
 					if (format[iden + 1] == ' ' && !format[iden + 2])
