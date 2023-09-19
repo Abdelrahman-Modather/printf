@@ -34,8 +34,7 @@ int _printf(const char *format, ...)
 					buff_hand(buff, format[iden], idenbuffer), lngth++, iden--;
 				}
 				else
-				{
-					lngth +=  fun(the_list, buff, idenbuffer);
+				{lngth +=  fun(the_list, buff, idenbuffer);
 					iden += le_prnt_func(format, iden + 1);
 				}
 			} iden++;
