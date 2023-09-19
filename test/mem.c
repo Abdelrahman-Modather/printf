@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 unsigned int _memcpy(buffer_t *oup, const char *source, unsigned int var);
 void free_buffer(buffer_t *oup);
