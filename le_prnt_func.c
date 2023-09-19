@@ -10,8 +10,8 @@ int le_prnt_func(const char *i, int ndx)
 {
 	prnt_tx pren[] = {
 		{"c", prnt_char}, {"s", prnt_str},
-/*
-*{"i", prnt_int},{"d", prnt_int},{"b", prnt_bin},{"u",prnt_uint},
+
+{"i", prnt_int},{"d", prnt_int},/*{"b", prnt_bin},{"u",prnt_uint},
 *{"o", prnt_oct},{"x", prnt_hex},{"X", prnt_uppx},
 *{"S", prnt_usr},{"p", prnt_adderss},{"li", prnt_lint},
 *{"ld", prnt_lint},{"lu", prnt_luint},{"lo", prnt_loct},
