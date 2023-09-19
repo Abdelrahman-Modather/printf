@@ -53,25 +53,18 @@ int (*g_prnt_fun(const char *i, int ndx))(va_list, char *, unsigned int);
 int le_prnt_func(const char *i, int ndx);
 unsigned int buff_hand(char *buffp, char c, unsigned int idenbuffer);
 int prnt_buffer(char *buffp, unsigned int buffn);
-/**
-*char *bin_arr(char *bin, long int inp, int negn, int bisize);
-*char *hex_arr(char *bny, char *hex, int upp, int hesize);
-*char *oct_arr(char *bny, char *oct);
-*char *long_oct_arr(char *bny, char *oct);
-*char *short_oct_arr(char *bny, char *oct);
-*/
 
 /**
  * struct bfr - Structure for buffer
- * @buffer: pointer for buffer
- * @start: pointer for start
- * @len: length
+ * @buffer: Pointer for buffer
+ * @start: Pointer for start
+ * @len: Length of the buffer
  */
 typedef struct bfr
 {
-char *buffer;
-char *start;
-unsigned int len;
+	char *buffer;
+	char *start;
+	unsigned int len;
 } buffer_t;
 
 #endif
