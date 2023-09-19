@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
     unsigned int iden = 0, lngth = 0, idenbuffer = 0;
     va_list the_list;
-    int (*fnc)(va_list, char *, unsigned int);
+    int (*fun)(va_list, char *, unsigned int);
     char *buff;
 
     va_start(the_list, format), buff = malloc(sizeof(char) * 1024);
@@ -48,6 +48,6 @@ int _printf(const char *format, ...)
         for (idenbuffer = lngth; idenbuffer > 1024; idenbuffer -= 1024)
             ;
     }
-    buff_prnt(buff, idenbuffer), free(buff), va_end(the_list);
+    prnt_buffer(buff, idenbuffer), free(buff), va_end(the_list);
     return (lngth);
 }

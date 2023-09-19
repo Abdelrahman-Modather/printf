@@ -26,7 +26,7 @@ int prnt_re(va_list the_list, char *buffp, unsigned int buffndx)
     jojo = iden - 1;
     for (; jojo >= 0; jojo--)
     {
-        buffndx = buff_hand(buffp, string[jojo], buffp);
+        buffndx = buff_hand(buffp, string[jojo], buffndx);
     }
     return (iden);
 }
