@@ -2,7 +2,6 @@
 /**
  * _printf - the fun of alx project
  * @format: input
- * ...: args list
  * Return: wanted text
 */
 int _printf(const char *format, ...)
