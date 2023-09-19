@@ -10,10 +10,10 @@
 */
 int prnt_char(va_list the_list, char *buffp, unsigned int buffndx)
 {
-    char c;
+	char c;
 
-    c = va_arg(the_list, int);
-    buff_hand(buffp, c, buffndx);
+	c = va_arg(the_list, int);
+	buff_hand(buffp, c, buffndx);
 
-    return (1);
+	return (1);
 }
