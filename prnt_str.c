@@ -8,18 +8,18 @@
 */
 int prnt_str(va_list the_list, char *buffp, unsigned int buffndx)
 {
-    char *string;
-    unsigned int iden;
-    char null[] = "(null)";
+	char *string;
+	unsigned int iden;
+	char null[] = "(null)";
 
-    string = va_arg(the_list, char *);
-    if (string == NULL)
-    {
-        for (iden = 0; null[iden]; iden++)
-            buffndx = buff_hand(buffp, null[iden], buffndx);
-        return (6);
-    }
-    for (iden = 0; string[iden]; iden++)
-        buffndx = buff_hand(buffp, string[iden], buffndx);
-    return (iden);
+	string = va_arg(the_list, char *);
+	if (string == NULL)
+	{
+		for (iden = 0; null[iden]; iden++)
+			buffndx = buff_hand(buffp, null[iden], buffndx);
+		return (6);
+	}
+	for (iden = 0; string[iden]; iden++)
+		buffndx = buff_hand(buffp, string[iden], buffndx);
+	return (iden);
 }
