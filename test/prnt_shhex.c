@@ -12,7 +12,7 @@ int prnt_shhex(va_list the_list, char *buffp, unsigned int buffndx)
     short int inp, calc, iden, f_d, negn;
     char *hex, *bin;
 
-    inp = va_arg(the_list, short int);
+    inp = va_arg(the_list, int);
     negn = 0;
     if (inp == 0)
     {
