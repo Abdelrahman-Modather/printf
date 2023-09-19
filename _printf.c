@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 	va_list the_list;
 	int (*fun)(va_list, char *, unsigned int);
 	char *buff;
+
 	va_start(the_list, format), buff = malloc(sizeof(char) * 1024);
 	if (!format || !buff || (format[iden] == '%' && !format[iden + 1]))
 		return (-1);
@@ -46,6 +47,6 @@ int _printf(const char *format, ...)
 		for (idenbuffer = lngth; idenbuffer > 1024; idenbuffer -= 1024)
 			;
 	}
-	prnt_buffer(buff, idenbuffer), free(buff), va_end(the_list);
+prnt_buffer(buff, idenbuffer), free(buff), va_end(the_list);
 	return (lngth);
 }
