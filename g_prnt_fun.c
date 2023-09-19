@@ -8,7 +8,7 @@
 int (*g_prnt_fun(const char *i, int ndx))(va_list, char *, unsigned int)
 {
     prnt_tx pren[] = {
-        {"c", prnt_char}, {"s", prnt_str}, {"i", prnt_int},
+        {"c", prnt_char}, {"s", prnt_str},/** {"i", prnt_int},
         {"d", prnt_int}, {"b", prnt_bin}, {"u", prnt_uint},
         {"o", prnt_oct}, {"x", prnt_hex}, {"X", prnt_uppx},
         {"S", prnt_usr}, {"p", prnt_adderss}, {"li", prnt_lint},
@@ -22,10 +22,10 @@ int (*g_prnt_fun(const char *i, int ndx))(va_list, char *, unsigned int)
         {"+x", prnt_hex}, {"+X", prnt_uppx}, {" i", prnt_sint},
         {" d", prnt_sint}, {" u", prnt_uint}, {" o", prnt_oct},
         {" x", prnt_hex}, {" X", prnt_uppx}, {"R", prnt_root},
-        {"r", prnt_re}, {"%", prnt_prs}, {"l", prnt_prs},
+        {"r", prnt_re},*/ {"%", prnt_prs},/* {"l", prnt_prs},
         {"h", prnt_prs}, {" +i", prnt_pint}, {" +d", prnt_pint},
         {"+ i", prnt_pint}, {"+ d", prnt_pint}, {" %", prnt_prs},
-        {NULL, NULL},
+        {NULL, NULL},*/
     };
     int iden = 0, jojo = 0, st_ndx;
 
