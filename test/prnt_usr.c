@@ -21,7 +21,7 @@ int prnt_usr(va_list the_list, char *buffp, unsigned int buffndx)
         if (string[iden] < 32 || string[iden] >= 127)
         {
             buffndx = buff_hand(buffp, '\\', buffndx);
-            buffndx = buff_hand(buffndx, 'x', buffndx);
+            buffndx = buff_hand(buffp, 'x', buffndx);
             oup = string[iden];
             bin = bin_arr(bin, oup, 0, 32);
             hex = hex_arr(bin, hex, 1, 8);

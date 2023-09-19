@@ -1,7 +1,7 @@
 #include "main.h"
 
-unsigned int memory_copy(buffer_t *oup, const char *source, unsigned int var);
-void buff_free(buffer_t *oup);
+unsigned int _memcpy(buffer_t *oup, const char *source, unsigned int var);
+void free_buffer(buffer_t *oup);
 buffer_t *buff_init(void);
 
 /**
@@ -11,7 +11,7 @@ buffer_t *buff_init(void);
  * @var: num copied
  * Return: num that copied
 */
-unsigned int memory_copy(buffer_t *oup, const char *source, unsigned int var)
+unsigned int _memcpy(buffer_t *oup, const char *source, unsigned int var)
 {
     unsigned int ndx;
 
