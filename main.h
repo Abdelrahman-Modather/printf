@@ -19,7 +19,7 @@ typedef struct
 } buffer_t;
 
 int _printf(const char *format, ...);
-int prnt_prs(va_list p __attribute__((not_used)), char *buffp, unsigned int buffndx);
+int prnt_prs(va_list p __attribute__((unused)), char *buffp, unsigned int buffndx);
 int prnt_char(va_list the_list, char *buffp, unsigned int buffndx);
 int prnt_str(va_list the_list, char *buffp, unsigned int buffndx);
 int prnt_int(va_list the_list, char *buffp, unsigned int buffndx);
