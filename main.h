@@ -5,13 +5,24 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+/**
+ * struct prnt - struct for prnt fun
+ * @type_arg: iden
+ * @f: pointer
+ */
 typedef struct prnt
 {
 char *type_arg;
 int (*f)(va_list, char *, unsigned int);
 } prnt_tx;
 
-typedef struct
+/**
+ * struct bfr - struct for buffer
+ * @buffer: pointer for buffer
+ * @start: pointer for start
+ * @len: length
+ */
+typedef struct bfr
 {
 char *buffer;
 char *start;
@@ -19,7 +30,7 @@ unsigned int len;
 } buffer_t;
 
 int _printf(const char *format, ...);
-int prnt_prs(va_list a __attribute__((unused)), char *buffp, unsigned int buffndx);
+int prnt_prs(va_list a __attribute__((unused)), char *buffp, unsigned int bfi);
 int prnt_char(va_list the_list, char *buffp, unsigned int buffndx);
 int prnt_str(va_list the_list, char *buffp, unsigned int buffndx);
 int prnt_int(va_list the_list, char *buffp, unsigned int buffndx);
