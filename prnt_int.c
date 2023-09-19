@@ -14,15 +14,16 @@ int prnt_int(va_list the_list, char *buffp, unsigned int buffndx)
 
 	inp = va_arg(the_list, int);
 	negn = 0;
+
 	if (inp < 0)
 	{
-		inp_in = inp * -1;
+		inp_in = (unsigned int)(-inp);
 		buffndx = buff_hand(buffp, '-', buffndx);
 		negn = 1;
 	}
 	else
 	{
-		inp_in = inp;
+		inp_in = (unsigned int)inp;
 	}
 
 	inp_tmp = inp_in;
@@ -38,5 +39,6 @@ int prnt_int(va_list the_list, char *buffp, unsigned int buffndx)
 	{
 		buffndx = buff_hand(buffp, ((inp_in / dive) % 10) + '0', buffndx);
 	}
+
 	return (iden + negn);
 }

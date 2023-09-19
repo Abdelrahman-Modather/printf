@@ -25,9 +25,10 @@ int (*g_prnt_fun(const char *i, int ndx))(va_list, char *, unsigned int)
 *{"r", prnt_re},
 */
 {"%", prnt_prs}, {" %", prnt_prs},
-{NULL, NULL}, {"i", prnt_int}, {"d", prnt_int},
-{"#d", prnt_int}, {"#i", prnt_int},
-/*
+{"i", prnt_int}, {"d", prnt_int},
+{NULL, NULL},
+/**
+*{"#d", prnt_int}, {"#i", prnt_int},
 *{"h", prnt_prs},  ,{"l", prnt_prs},
 *, ,
 */
