@@ -34,7 +34,7 @@ int prnt_int(va_list the_list, char *buffp, unsigned int buffndx)
 		inp_tmp /= 10;
 	}
 
-	for (iden = 0; iden > 0; dive /= 10, iden++)
+	for (iden = 0; dive > 0; dive /= 10, iden++)
 	{
 		buffndx = buff_hand(buffp, ((inp_in / dive) % 10) + '0', buffndx);
 	}
