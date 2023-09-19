@@ -13,25 +13,25 @@ buffer_t *buff_init(void);
 */
 unsigned int _memcpy(buffer_t *oup, const char *source, unsigned int var)
 {
-    unsigned int ndx;
+	unsigned int ndx;
 
-    for (ndx = 0; ndx < var; ndx++)
-    {
-        *(oup->buffer) = *(source + ndx);
-        (oup->len)++;
+	for (ndx = 0; ndx < var; ndx++)
+	{
+		*(oup->buffer) = *(source + ndx);
+		(oup->len)++;
 
-        if (oup->len == 1024)
-        {
-            write(1, oup->start, oup->len);
-            oup->buffer = oup->start;
-            oup->len = 0;
-        }
+		if (oup->len == 1024)
+		{
+			write(1, oup->start, oup->len);
+			oup->buffer = oup->start;
+			oup->len = 0;
+		}
 
-        else
-            (oup->buffer)++;
-    }
+		else
+			(oup->buffer)++;
+	}
 
-    return (var);
+	return (var);
 }
 
 /**
@@ -40,8 +40,8 @@ unsigned int _memcpy(buffer_t *oup, const char *source, unsigned int var)
 */
 void buff_free(buffer_t *oup)
 {
-    free(oup->start);
-    free(oup);
+	free(oup->start);
+	free(oup);
 }
 
 /**
@@ -50,21 +50,21 @@ void buff_free(buffer_t *oup)
 */
 buffer_t *buff_init(void)
 {
-    buffer_t *oup;
-    
-    oup = malloc(sizeof(buffer_t));
-    if (oup == NULL)
-        return (NULL);
-    
-    oup->buffer = malloc(sizeof(char) * 1024);
-    if (oup->buffer == NULL)
-    {
-        free(oup);
-        return (NULL);
-    }
+	buffer_t *oup;
+	
+	oup = malloc(sizeof(buffer_t));
+	if (oup == NULL)
+		return (NULL);
+	
+	oup->buffer = malloc(sizeof(char) * 1024);
+	if (oup->buffer == NULL)
+	{
+		free(oup);
+		return (NULL);
+	}
 
-    oup->start = oup->buffer;
-    oup->len = 0;
+	oup->start = oup->buffer;
+	oup->len = 0;
 
-    return (oup);
+	return (oup);
 }
