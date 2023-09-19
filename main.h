@@ -62,7 +62,7 @@ int prnt_buffer(char *buffp, unsigned int buffn);
 */
 
 /**
- * struct bfr - struct for buffer
+ * struct bfr - Structure for buffer
  * @buffer: pointer for buffer
  * @start: pointer for start
  * @len: length
