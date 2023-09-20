@@ -13,7 +13,7 @@ int (*g_prnt_fun(const char *i, int ndx))(va_list, char *, unsigned int)
 		{"%", prnt_prs}, {" %", prnt_prs},
 		{"i", prnt_int}, {"d", prnt_int},
 		{"o", prnt_oct}, {"x", prnt_hex},
-		{"X", prnt_uppx},
+		{"X", prnt_uppx}, {"p", prnt_adderss},
 		{NULL, NULL},
 	};
 	int iden = 0, jojo = 0, st_ndx;
