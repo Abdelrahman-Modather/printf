@@ -1,5 +1,7 @@
 #include "main.h"
 
+char *bin_arr(char *bin, int inp, int negn, int bisize);
+char *hex_arr(char *bny, char *hex, int upp, int hesize);
 /**
  * prnt_uppx - print dec to hex
  * @the_list: args

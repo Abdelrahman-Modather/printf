@@ -1,5 +1,7 @@
 #include "main.h"
 
+char *bin_arr(char *bin, long int inp, int negn, int bisize);
+char *oct_arr(char *bny, char *oct);
 /**
  * prnt_oct - print dec to hex
  * @the_list: args
