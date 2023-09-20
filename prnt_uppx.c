@@ -44,3 +44,4 @@ int prnt_uppx(va_list the_list, char *buffp, unsigned int buffndx)
 	free(hex);
 	return (calc);
 }
+
