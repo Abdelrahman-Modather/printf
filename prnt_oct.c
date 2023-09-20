@@ -29,7 +29,7 @@ int prnt_oct(va_list the_list, char *buffp, unsigned int buffndx)
 	}
 	oct[calc] = '\0';
 
-	for ( iden = calc - 1; iden >= 0; iden--)
+	for (iden = calc - 1; iden >= 0; iden--)
 	{
 		buffndx = buff_hand(buffp, oct[iden], buffndx);
 	}

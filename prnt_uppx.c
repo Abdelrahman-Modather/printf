@@ -24,16 +24,17 @@ int prnt_uppx(va_list the_list, char *buffp, unsigned int buffndx)
 	while (inp > 0)
 	{
 		int rem = inp % 16;
+
 		hex[calc] = (rem < 10) ? ('0' + rem) : ('A' + rem - 10);
 		inp /= 16;
 		calc++;
 	}
 	hex[calc] = '\0';
 
-	for ( iden = calc -1; iden >= 0; iden--)
+	for (iden = calc - 1; iden >= 0; iden--)
 	{
 		buffndx = buff_hand(buffp, hex[iden], buffndx);
 	}
-	
+
 	return (calc);
 }

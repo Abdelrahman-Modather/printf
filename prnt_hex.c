@@ -11,7 +11,7 @@
 int prnt_hex(va_list the_list, char *buffp, unsigned int buffndx)
 {
 	unsigned int inp;
-	int calc, iden ;
+	int calc, iden;
 	char hex[9];
 
 	inp = va_arg(the_list, unsigned int);
@@ -32,7 +32,7 @@ int prnt_hex(va_list the_list, char *buffp, unsigned int buffndx)
 	}
 	hex[calc] = '\0';
 
-	for ( iden = calc - 1; iden >= 0; iden--)
+	for (iden = calc - 1; iden >= 0; iden--)
 	{
 		buffndx = buff_hand(buffp, hex[iden], buffndx);
 	}
