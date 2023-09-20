@@ -10,24 +10,10 @@ int le_prnt_func(const char *i, int ndx)
 {
 	prnt_tx pren[] = {
 	{"c", prnt_char}, {"s", prnt_str}, {"b", prnt_bin},
-/**
-*{"o", prnt_oct},{"x", prnt_hex},{"X", prnt_uppx},
-*{"S", prnt_usr},{"p", prnt_adderss},{"li", prnt_lint},
-*{"ld", prnt_lint},{"lu", prnt_luint},{"lo", prnt_loct},
-*{"lx", prnt_lhex},{"lX", prnt_luppx},{"hi", prnt_shint},
-*{"hd", prnt_shint},{"hu", prnt_shuint},{"ho", prnt_shoct},
-*{"hx", prnt_shhex},{"hX", prnt_shuppx},,{"+ d", prnt_pint},
-*{"#o", prnt_noct},{"#x", prnt_nhex},{"#X", prnt_nuppx},{"+ i", prnt_pint},
-*,{"#u", prnt_uint},{"+i", prnt_pint},{"+d", prnt_pint},
-*{"+u", prnt_uint},{"+o", prnt_oct},{"+x", prnt_hex},{"+X", prnt_uppx},
-*{" i", prnt_sint},{" d", prnt_sint},{" u", prnt_uint},{" o", prnt_oct},
-*{" x", prnt_hex},{" X", prnt_uppx},{"R", prnt_root},{"r", prnt_re},
-*{"l", prnt_prs},{"h", prnt_prs},{" +i", prnt_pint},{" +d", prnt_pint}
-*/
-{"i", prnt_int}, {"d", prnt_int}, {"%", prnt_prs},
-{" %", prnt_prs}, {"u", prnt_uint}, {"b", prnt_bin},
-{NULL, NULL}, {"#d", prnt_int}, {"#i", prnt_int},
-	};
+	{"i", prnt_int}, {"d", prnt_int}, {"%", prnt_prs},
+	{" %", prnt_prs}, {"u", prnt_uint}, {"b", prnt_bin},
+	{"#d", prnt_int}, {"#i", prnt_int}, {NULL, NULL},
+	}; 
 	int iden = 0, jojo = 0, st_ndx;
 
 	st_ndx = ndx;

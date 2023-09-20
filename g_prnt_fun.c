@@ -10,29 +10,9 @@ int (*g_prnt_fun(const char *i, int ndx))(va_list, char *, unsigned int)
 	prnt_tx pren[] = {
 		{"c", prnt_char}, {"s", prnt_str},
 		{"u", prnt_uint}, {"b", prnt_bin},
-/**
-*{"o", prnt_oct}, {"x", prnt_hex}, {"X", prnt_uppx},
-*{"S", prnt_usr}, {"p", prnt_adderss}, {"li", prnt_lint},
-*{"ld", prnt_lint}, {"lu", prnt_luint}, {"lo", prnt_loct},
-*{"lx", prnt_lhex}, {"lX", prnt_luppx}, {"hi", prnt_shint},
-*{"hd", prnt_shint}, {"hu", prnt_shuint}, {"ho", prnt_shoct},
-*{"hx", prnt_shhex}, {"hX", prnt_shuppx}, ,
-*{"#o", prnt_noct}, {"#x", prnt_nhex}, {"#X", prnt_nuppx},
-*,{"#u", prnt_uint},
-*{"+d", prnt_pint}, {"+u", prnt_uint}, {"+o", prnt_oct},
-*{"+x", prnt_hex}, {"+X", prnt_uppx}, {" i", prnt_sint},
-*{" d", prnt_sint}, {" u", prnt_uint}, {" o", prnt_oct},
-*{" x", prnt_hex}, {" X", prnt_uppx}, {"R", prnt_root},
-*{"r", prnt_re},
-*/
-{"%", prnt_prs}, {" %", prnt_prs},
-{"i", prnt_int}, {"d", prnt_int},
-{NULL, NULL},
-/**
-*{"#d", prnt_int}, {"#i", prnt_int},
-*{"h", prnt_prs},  ,{"l", prnt_prs},
-*, ,
-*/
+		{"%", prnt_prs}, {" %", prnt_prs},
+		{"i", prnt_int}, {"d", prnt_int},
+		{NULL, NULL},
 	};
 	int iden = 0, jojo = 0, st_ndx;
 
