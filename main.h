@@ -25,7 +25,8 @@ int prnt_int(va_list the_list, char *buffp, unsigned int buffndx);
 int prnt_uint(va_list the_list, char *buffp, unsigned int buffndx);
 int prnt_bin(va_list the_list, char *buffp, unsigned int buffndx);
 
-/*int prnt_oct(va_list the_list, char *buffp, unsigned int buffndx);
+/*
+*int prnt_oct(va_list the_list, char *buffp, unsigned int buffndx);
 *int prnt_hex(va_list the_list, char *buffp, unsigned int buffndx);
 *int prnt_uppx(va_list the_list, char *buffp, unsigned int buffndx);
 *int prnt_usr(va_list the_list, char *buffp, unsigned int buffndx);
