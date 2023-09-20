@@ -1,6 +1,7 @@
 #include "main.h"
 
 /**
+ * prnt_hex - prints hexa
  * prnt_oct - print dec to hex
  * @the_list: args
  * @buffp: pointer for buff
@@ -24,16 +25,16 @@ int prnt_hex(va_list the_list, char *buffp, unsigned int buffndx)
 	while (inp > 0)
 	{
 		int rem = inp % 16;
+
 		hex[calc] = (rem < 10) ? ('0' + rem) : ('a' + rem - 10);
 		inp /= 16;
 		calc++;
 	}
 	hex[calc] = '\0';
 
-	for (f_d = iden = calc -1; iden >= 0; iden--)
+	for (f_d = iden = calc - 1; iden >= 0; iden--)
 	{
 		buffndx = buff_hand(buffp, hex[iden], buffndx);
 	}
-	
 	return (calc);
 }
