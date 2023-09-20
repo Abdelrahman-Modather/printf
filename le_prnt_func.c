@@ -13,7 +13,7 @@ int le_prnt_func(const char *i, int ndx)
 	{"i", prnt_int}, {"d", prnt_int}, {"%", prnt_prs},
 	{" %", prnt_prs}, {"u", prnt_uint}, {"b", prnt_bin},
 	{"#d", prnt_int}, {"#i", prnt_int}, {NULL, NULL},
-	}; 
+	};
 	int iden = 0, jojo = 0, st_ndx;
 
 	st_ndx = ndx;
