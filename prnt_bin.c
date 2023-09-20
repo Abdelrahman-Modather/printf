@@ -1,5 +1,6 @@
 #include "main.h"
 
+char *bin_arr(char *bin, int inp, int negn, int bisize);
 /**
  * prnt_bin - print dec to bin
  * @the_list: args
@@ -40,3 +41,4 @@ int prnt_bin(va_list the_list, char *buffp, unsigned int buffndx)
 	free(bin);
 	return (calc);
 }
+

@@ -8,8 +8,9 @@
 int (*g_prnt_fun(const char *i, int ndx))(va_list, char *, unsigned int)
 {
 	prnt_tx pren[] = {
-		{"c", prnt_char}, {"s", prnt_str}, {"u", prnt_uint},/**
-* {"b", prnt_bin}, 
+		{"c", prnt_char}, {"s", prnt_str},
+		{"u", prnt_uint}, {"b", prnt_bin},
+/**
 *{"o", prnt_oct}, {"x", prnt_hex}, {"X", prnt_uppx},
 *{"S", prnt_usr}, {"p", prnt_adderss}, {"li", prnt_lint},
 *{"ld", prnt_lint}, {"lu", prnt_luint}, {"lo", prnt_loct},

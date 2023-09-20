@@ -20,7 +20,7 @@ char *bin_arr(char *bin, long int inp, int negn, int bisize)
 		if (inp == 2)
 			bin[iden] = '0';
 		else
-			bin[iden] = (inp %2) + '0';
+			bin[iden] = (inp % 2) + '0';
 		inp /= 2;
 	}
 	if (inp != 0)
@@ -35,3 +35,4 @@ char *bin_arr(char *bin, long int inp, int negn, int bisize)
 	}
 	return (bin);
 }
+
