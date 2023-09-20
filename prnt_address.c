@@ -1,6 +1,9 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdint.h>
 
+int prnt_bin(va_list the_list, char *buffp, unsigned int buffndx);
+char *hex_arr(char *bny, char *hex, int upp, int hesize);
 /**
  * prnt_address - prints address of a var
  * @the_list: args
@@ -11,12 +14,12 @@
 int prnt_adderss(va_list the_list, char *buffp, unsigned int buffndx)
 {
 	void *address;
-	long int inp;
+	intptr_t inp;
 	int iden, calc, f_d, negn;
 	char *hex, *bin;
 	char nil[] = "(nil)";
 
-	address = (va_arg(the_list, void *));
+	address = va_arg(the_list, void *);
 	if (address == NULL)
 	{
 		for (iden = 0; nil[iden]; iden++)
