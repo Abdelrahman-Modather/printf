@@ -1,9 +1,7 @@
 #include "main.h"
 
-char *hex_arr(char *bny, char *hex, int upp, int hesize);
-char *bin_arr(char *bin, int inp, int negn, int bisize);
 /**
- * prnt_hex - print dec to hex
+ * prnt_oct - print dec to hex
  * @the_list: args
  * @buffp: pointer for buff
  * @buffndx: buffer index
@@ -11,36 +9,31 @@ char *bin_arr(char *bin, int inp, int negn, int bisize);
 */
 int prnt_hex(va_list the_list, char *buffp, unsigned int buffndx)
 {
-	int inp, calc, iden, f_d, negn;
-	char *hex, *bin;
+	unsigned int inp;
+	int calc, iden, f_d;
+	char hex[9];
 
-	inp = va_arg(the_list, int);
-	negn = 0;
+	inp = va_arg(the_list, unsigned int);
 	if (inp == 0)
 	{
 		buffndx = buff_hand(buffp, '0', buffndx);
 		return (1);
 	}
-	if (inp < 0)
+	calc = 0;
+
+	while (inp > 0)
 	{
-		inp = (inp * -1) - 1;
-		negn = 1;
+		int rem = inp % 16;
+		hex[calc] = (rem < 10) ? ('0' + rem) : ('a' + rem - 10);
+		inp /= 16;
+		calc++;
 	}
-	bin = malloc(sizeof(char) * (32 + 1));
-	bin = bin_arr(bin, inp, negn, 32);
-	hex = malloc(sizeof(char) * (8 + 1));
-	hex = hex_arr(bin, hex, 0, 8);
-	for (f_d = calc = iden = 0; hex[iden]; iden++)
+	hex[calc] = '\0';
+
+	for (f_d = iden = calc -1; iden >= 0; iden--)
 	{
-		if (hex[iden] != '0' && f_d == '0')
-			f_d = 1;
-		if (f_d)
-		{
-			buffndx = buff_hand(buffp, hex[iden], buffndx);
-			calc++;
-		}
+		buffndx = buff_hand(buffp, hex[iden], buffndx);
 	}
-	free(bin);
-	free(hex);
+	
 	return (calc);
 }

@@ -1,7 +1,5 @@
 #include "main.h"
 
-char *bin_arr(char *bin, long int inp, int negn, int bisize);
-char *oct_arr(char *bny, char *oct);
 /**
  * prnt_oct - print dec to hex
  * @the_list: args
@@ -11,36 +9,30 @@ char *oct_arr(char *bny, char *oct);
 */
 int prnt_oct(va_list the_list, char *buffp, unsigned int buffndx)
 {
-	int inp, calc, iden, f_d, negn;
-	char *oct, *bin;
+	unsigned int inp;
+	int calc, iden, f_d;
+	char oct[12];
 
-	inp = va_arg(the_list, int);
-	negn = 0;
+	inp = va_arg(the_list, unsigned int);
 	if (inp == 0)
 	{
 		buffndx = buff_hand(buffp, '0', buffndx);
 		return (1);
 	}
-	if (inp < 0)
+	calc = 0;
+
+	while (inp > 0)
 	{
-		inp = (inp * -1) - 1;
-		negn = 1;
+		oct[calc] = (inp % 8) + '0';
+		inp /= 8;
+		calc++;
 	}
-	bin = malloc(sizeof(char) * (32 + 1));
-	bin = bin_arr(bin, inp, negn, 32);
-	oct = malloc(sizeof(char) * (11 + 1));
-	oct = oct_arr(bin, oct);
-	for (f_d = calc = iden = 0; oct[iden]; iden++)
+	oct[calc] = '\0';
+
+	for (f_d = iden = calc -1; iden >= 0; iden--)
 	{
-		if (oct[iden] != '0' && f_d == '0')
-			f_d = 1;
-		if (f_d)
-		{
-			buffndx = buff_hand(buffp, oct[iden], buffndx);
-			calc++;
-		}
+		buffndx = buff_hand(buffp, oct[iden], buffndx);
 	}
-	free(bin);
-	free(oct);
+	
 	return (calc);
 }
