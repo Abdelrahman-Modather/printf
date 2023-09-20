@@ -12,6 +12,8 @@ int (*g_prnt_fun(const char *i, int ndx))(va_list, char *, unsigned int)
 		{"u", prnt_uint}, {"b", prnt_bin},
 		{"%", prnt_prs}, {" %", prnt_prs},
 		{"i", prnt_int}, {"d", prnt_int},
+		{"o", prnt_oct}, {"x", prnt_hex},
+		{"X", prnt_uppx},
 		{NULL, NULL},
 	};
 	int iden = 0, jojo = 0, st_ndx;
