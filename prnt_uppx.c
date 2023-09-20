@@ -1,6 +1,7 @@
 #include "main.h"
 
 /**
+ * prnt_uppx - the func does important stuff
  * prnt_oct - print dec to hex
  * @the_list: args
  * @buffp: pointer for buff

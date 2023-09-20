@@ -5,7 +5,7 @@
 int prnt_bin(va_list the_list, char *buffp, unsigned int buffndx);
 char *hex_arr(char *bny, char *hex, int upp, int hesize);
 /**
- * prnt_address - prints address of a var
+ * prnt_adderss - Prints the adress
  * @the_list: args
  * @buffp: pointer for buffer
  * @buffndx: buff index
