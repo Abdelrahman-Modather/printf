@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-int prnt_bin(va_list the_list, char *buffp, unsigned int buffndx);
+char *bin_arr(char *bin, long int inp, int negn, int bisize);
 char *hex_arr(char *bny, char *hex, int upp, int hesize);
 /**
  * prnt_adderss - Prints the adress
