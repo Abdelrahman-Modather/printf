@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * prnt_uppx - print dec to hex
+ * prnt_oct - print dec to hex
  * @the_list: args
  * @buffp: pointer for buff
  * @buffndx: buffer index
  * Return: chars printed
 */
-int prnt_uppx(va_list the_list, char *buffp, unsigned int buffndx)
+int prnt_oct(va_list the_list, char *buffp, unsigned int buffndx)
 {
 	int inp, calc, iden, f_d, negn;
-	char *hex, *bin;
+	char *oct, *bin;
 
 	inp = va_arg(the_list, int);
 	negn = 0;
@@ -26,20 +26,19 @@ int prnt_uppx(va_list the_list, char *buffp, unsigned int buffndx)
 	}
 	bin = malloc(sizeof(char) * (32 + 1));
 	bin = bin_arr(bin, inp, negn, 32);
-	hex = malloc(sizeof(char) * (8 + 1));
-	hex = hex_arr(bin, hex, 1, 8);
-	for (f_d = calc = iden = 0; hex[iden]; iden++)
+	oct = malloc(sizeof(char) * (11 + 1));
+	oct = oct_arr(bin, oct);
+	for (f_d = calc = iden = 0; oct[iden]; iden++)
 	{
-		if (hex[iden] != '0' && f_d == '0')
+		if (oct[iden] != '0' && f_d == '0')
 			f_d = 1;
 		if (f_d)
 		{
-			buffndx = buff_hand(buffp, hex[iden], buffndx);
+			buffndx = buff_hand(buffp, oct[iden], buffndx);
 			calc++;
 		}
 	}
 	free(bin);
-	free(hex);
+	free(oct);
 	return (calc);
 }
-

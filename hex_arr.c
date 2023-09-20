@@ -23,7 +23,7 @@ char *hex_arr(char *bny, char *hex, int upp, int hesize)
 			operator = ((bny[iden] - '0') * jojo) + operator;
 		iden++;
 		if (operator < 10)
-			hex[iden / 4] = operator +48;
+			hex[iden / 4] = operator + 48;
 		else
 			hex[iden / 4] = operator + intoletter;
 	}

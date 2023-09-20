@@ -20,7 +20,7 @@ char *oct_arr(char *bny, char *oct)
 		for (operator = 0, jojo = 1; jojo <= ocsize; jojo *= 2, iden--)
 			operator = ((bny[iden] - '0') * jojo) + operator;
 		iden++;
-		oct[esta_oct] = operator +'0';
+		oct[esta_oct] = operator + '0';
 	}
 	return (oct);
 }
